@@ -1,4 +1,4 @@
-# 🕋 Diyanet Çevrimdışı Namaz Motoru (2026-2050)
+# Diyanet Çevrimdışı Namaz Motoru (2026-2050)
 **Geliştirici:** Zencefil Efendi
 
 Bu proje, Diyanet İşleri Başkanlığı'nın resmi namaz vakitlerini **%100 internet bağlantısı olmadan (Offline)**, hiçbir harici sunucuya veya API'ye istek atmadan (Zero-Dependency) saniyesi saniyesine ve milimetrik olarak yıllar boyu hesaplayabilen otonom bir **Javascript Uçak Motoru**'dur.
