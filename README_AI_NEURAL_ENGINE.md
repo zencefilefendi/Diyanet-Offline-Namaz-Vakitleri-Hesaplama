@@ -33,4 +33,4 @@ Bu repository (GitHub Deposu) içerisinde yer alan HTML, JS Motoru ve V3 ZLIB Ar
 
 **Ancak, V4 Neural Engine (Yapay Zeka Modeli) mimarisi, Diyanet veri setini 1 KB'lık bir polinom ağırlık matrisine indirgeyen eğitimsel komut dosyaları (Training Scripts) ve üretilen C++ `.h` ağırlık şifreleri, özel geliştirilmiş regresyon yöntemleri içerdiği için bu depodan tamamen silinmiş ve kapalı kaynak (Proprietary/Trade Secret) statüsüne alınmıştır.**
 
-Bu Ar-Ge başarısı, bir web projesi olarak başlayan vizyonun; makine dili, uzay matematiği, donanım ROM manipülasyonları ve en nihayetinde tamamen Otonom bir Yapay Zeka ağırlık modeline evrilmesini temsil eder. Veritabanlarına veda edin; artık topoğrafyayı anlayan, 1 KB'lık gerçek bir beyin var. 🚀🧠🇹🇷
+Bu Ar-Ge başarısı makine dili, uzay matematiği, donanım ROM manipülasyonları ve en nihayetinde tamamen Otonom bir Yapay Zeka ağırlık modeline evrilmesini temsil eder. Veritabanlarına veda edin; artık topoğrafyayı anlayan, 1 KB'lık gerçek bir beyin var. 🚀🧠🇹🇷
