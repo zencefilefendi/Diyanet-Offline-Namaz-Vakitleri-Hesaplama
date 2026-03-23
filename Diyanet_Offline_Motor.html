@@ -421,7 +421,7 @@
       let deltas = [0, 0, 0, 0, 0, 0];
       if (co.har) {
         let doy = getDayOfYear(y, m, d);
-        let idx = Math.max(0, Math.min(364, doy - 1)) * 6;
+        let idx = Math.max(0, Math.min(364, doy)) * 6;
         deltas = [
           co.har.charCodeAt(idx) - 77,
           co.har.charCodeAt(idx + 1) - 77,
@@ -475,7 +475,7 @@
       ];
 
       const tm = raw.map(h => {
-        let mins = Math.round((h - Math.floor(h)) * 60 - 0.035);
+        let mins = Math.round((h - Math.floor(h)) * 60);
         let hrs = Math.floor(h);
         if (mins === 60) { mins = 0; hrs += 1; }
         if (mins < 0) { mins = 59; hrs -= 1; }
