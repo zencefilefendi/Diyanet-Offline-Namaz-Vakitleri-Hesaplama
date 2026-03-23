@@ -421,7 +421,7 @@
       let deltas = [0, 0, 0, 0, 0, 0];
       if (co.har) {
         let doy = getDayOfYear(y, m, d);
-        let idx = Math.max(0, Math.min(364, doy - 1)) * 6;
+        let idx = Math.max(0, Math.min(364, doy)) * 6;
         deltas = [
           co.har.charCodeAt(idx) - 77,
           co.har.charCodeAt(idx + 1) - 77,
