@@ -7,6 +7,7 @@ Motor, Türkiye'deki 81 İlin tamamını ve 972 İlçesini, ayrıca global refer
 - **Birinci Derece Kapsam (820 İlçe):** Diyanet'in özel yörünge eğrilerine doğrudan uyumu sağlayan `Harmonic Delta String` dizgilerine sahiptir.
 - **İkinci Derece Kapsam (152 Fallback İlçesi):** Eğer tanımlanmış özel bir imza yoksa (Örn: İstanbul/Adalar), otonom Jean Meeus algoritması söz konusu noktanın enlem (Latitude), boylam (Longitude) ve kesin Hiypsometrik Rakım (Altitude) koordinatlarını matematiksel olarak `transit` hesabına katarak gerçek zamanı üretir.
 - **Küresel Kapsam (Universal Timezone):** Sistem spesifik olarak GMT+3'ten bağımsız çalışacak global bir altyapıya çekilmiştir. `Intl.DateTimeFormat` altyapısı kurularak bölgelerin (Örn: `Eugene, Oregon`) Yaz Saati (DST) sapmaları formüle doğrudan otomatik entegre edilmektedir.
+- **Dinamik GPS Geometrisi (Autonomous Virtual District Matrix):** Sisteme, internetten bağımsız çalışan ve donanımsal ping atan bir `navigator.geolocation` modülü eklenmiştir. Mevcut `IL_ILCE_DB` veritabanında yer almayan koordinatlar için, anlık `[lat, lng, alt]` telemetrisi Jean Meeus mimarisine `on-the-fly` (anında üretilen) sanal bir lokasyon düğümü olarak eklenir ve mutlak astronomik hesaplama gerçekleştirilir.
 
 ## 2. Gök Mekaniği ve Jean Meeus Regülasyonları
 Güneşin konumsal deklinesini (`decl`) hesaplamak amacıyla Julian Date (JD) ve Equation of Time (`eqt` - Tadil-i Zaman) kullanılmaktadır.

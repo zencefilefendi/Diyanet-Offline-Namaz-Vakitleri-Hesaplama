@@ -26,6 +26,12 @@ Ufuk kırılması (Atmospheric Refraction) ve Güneş yarıçapı (Solar Semi-Di
 Motor yapısal olarak belirli bir GMT alanına sabitlenmemiştir. Sistem **Evrensel Dinamik Zaman Çözümleyicisi** barındırmaktadır:
 - İçeriğindeki `Intl.DateTimeFormat` modülü sayesinde ABD (Örn: *Eugene, Oregon - America/Los_Angeles*), Avrupa veya Asya'daki herhangi bir lokasyon için o günkü tarihin **Yaz Saati (DST) ve Kış Saati GMT offsetlerini** otonom olarak hesaplar ve `transit` (Zeval) denklemine enjekte eder. 
 
+### 4. Otonom Küresel GPS Konumlandırması (Autonomous GPS Localization)
+Veritabanı sınırlarını aşan dinamik bir lokasyon mimarisi devreye alınmıştır. İnternet erişimi olmadan dahi çalışan donanımsal GPS üzerinden (`navigator.geolocation` API):
+- Kullanıcının "Enlem, Boylam ve Rakım" değerleri milisaniyeler içerisinde alınır.
+- Elde edilen koordinatlar ve arka planda analiz edilen Timezone verisiyle geçici bir **Sanal Matematiksel İlçe Profili** (`🌍 Otonom GPS / Anlık Nokta`) oluşturulur.
+- Sistemin evrensel Jean Meeus algoritmaları bu profil üzerinden, o an dünya üzerinde fiziken bulunulan noktanın cm hassasiyetindeki mutlak astronomik vaktini türetir. Sistem saati ise varsayılan olarak `new Date()` motoruyla donanımsal senkronizasyona alınmıştır.
+
 ## Asimetrik Güvenlik: Kod Karartma (Obfuscation)
 Bu repositöride yer alan `Diyanet_Offline_Motor.html` üretim versiyonu, algoritma gizliliğinin sağlanması adına `javascript-obfuscator` kullanılarak **Control Flow Flattening**, **String Array Encoding (Base64)** ve **Dead Code Injection** teknikleriyle karartılmıştır. Geliştirici kaynak kodu `Diyanet_Offline_Motor_src.html` versiyonunda saklanmaktadır.
 
